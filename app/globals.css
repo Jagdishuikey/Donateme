@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #f7f3ea;
+  color: #17211c;
+}
+
+::selection {
+  background: #f3c766;
+  color: #17211c;
+}
+
+.grain {
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(243, 199, 102, 0.32), transparent 26%),
+    radial-gradient(circle at 82% 10%, rgba(63, 127, 140, 0.2), transparent 24%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.66), rgba(223, 243, 229, 0.52));
+}
+
+.impact-grid {
+  background-image:
+    linear-gradient(rgba(23, 33, 28, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(23, 33, 28, 0.08) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.focus-ring {
+  @apply focus:outline-none focus:ring-2 focus:ring-ink focus:ring-offset-2 focus:ring-offset-cloud;
+}
